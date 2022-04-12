@@ -208,7 +208,7 @@ async def first_call(callback: types.CallbackQuery):
 
 
 def start_parsing():
-    driver.get('https://csgorun.gg/')
+    driver.get('https://csgorun.run/')
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CLASS_NAME, 'switcher__content')))
     driver.find_element(By.CLASS_NAME, 'switcher__content').click()
     last_element = driver.find_element(By.CLASS_NAME, 'graph-label').get_attribute("href")
